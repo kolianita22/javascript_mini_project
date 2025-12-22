@@ -1,0 +1,13 @@
+function uniteUnique(...arrays) {
+  const result = [];
+
+  for (const arr of arrays) {
+    for (const value of arr) {
+      if (!result.includes(value)) {
+        result.push(value);
+      }
+    }
+  }
+
+  return result;
+}
