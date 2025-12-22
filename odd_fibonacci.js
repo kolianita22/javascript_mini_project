@@ -1,19 +1,17 @@
-function sumFibs(num)
-{
-  let a=0;
-  let b=1;
-  let c=a+b;
-  for(let i=0;i<=num;i++)
-  {
- 
-    
-    if(i%2!=0)
-    {
-      c+=i;
-    }
+function sumFibs(num) {
+  let prev = 0;
+  let curr = 1;
+  let sum = 0;
 
+  while (curr <= num) {
+    if (curr % 2 !== 0) {
+      sum += curr;
+    }
+    let next = prev + curr;
+    prev = curr;
+    curr = next;
   }
-  return c
-  
-} 
-console.log(sumFibs(4))
+
+  return sum;
+}
+console.log(sumFibs(1000))
